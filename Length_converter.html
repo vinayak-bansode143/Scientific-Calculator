@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Length Converter</title>
+		  <link rel="stylesheet" type="text/css" href="css/app1.css"> 
+        <script language="JavaScript"> 
+            function cmConverter(){
+            document.converter.m.value = document.converter.cm.value/100;
+            document.converter.km.value = document.converter.cm.value/1000;
+            document.converter.inch.value = document.converter.cm.value*0.39370;
+            document.converter.feet.value = document.converter.cm.value*0.032808;
+            }
+            function mConverter(){
+            document.converter.cm.value = document.converter.m.value/0.01;
+            document.converter.km.value = document.converter.m.value/1000;
+            document.converter.inch.value = document.converter.m.value*39.370;
+            document.converter.feet.value = document.converter.m.value*3.2808;
+            }
+            function kmConverter(){
+            document.converter.cm.value = document.converter.km.value/100;
+            document.converter.m.value = document.converter.km.value/1000;
+            document.converter.inch.value = document.converter.km.value*39370;
+            document.converter.feet.value = document.converter.km.value*3280.8;
+            }
+            function inchConverter(){
+            document.converter.m.value = document.converter.inch.value/39.370;
+            document.converter.km.value = document.converter.inch.value/39370;
+            document.converter.cm.value = document.converter.inch.value/0.39370;
+            document.converter.feet.value = document.converter.inch.value*0.083333
+            }
+            function feetConverter(){
+            document.converter.m.value = document.converter.feet.value/3.2808;
+            document.converter.km.value = document.converter.feet.value/3280.8;
+            document.converter.cm.value = document.converter.feet.value/0.032808;
+            document.converter.inch.value = document.converter.feet.value*12;
+            }
+        </script>
+	</head>
+	<body>
+        
+        <form name="converter">
+            <header>
+               <h2 >Length Converter</h2> 
+            </header>
+                <article><br>
+               <label> Cm: </label><br><input type="number" name="cm" placeholder="Centimeter" onChange="cmConverter()"><br>
+               <label> m: </label><br><input type="number" name="m" placeholder="Meters" onChange="cmConverter()"><br>
+                <label> Km: </label><br><input type="number" name="km" placeholder="Kilometer" onChange="cmConverter()"><br>
+               <label> Inch: </label><br><input type="number" name="inch" placeholder="Inch" onChange="inchConverter()"><br>
+               <label> Feet: </label><br><input type="number" name="feet" placeholder="Feet" onChange="feetConverter()"><br><br>
+                <input type="button" value="  Convert  "><br><br>
+                <a href="conversion.html" class="previous">&laquo; Previous</a>
+                </article>
+                </form>
+	</body>
+</html>

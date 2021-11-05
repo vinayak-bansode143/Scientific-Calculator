@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Temperature Converter</title>
+		  <link rel="stylesheet" type="text/css" href="css/app1.css"> 
+        <script language="JavaScript"> 
+            function fhConverter(){
+            document.converter.cel.value = (document.converter.fh.value-32)/1.8;
+            document.converter.kel.value = ((document.converter.fh.value-32)/1.8)+273.15;
+            }
+            function celConverter(){
+            document.converter.fh.value = (document.converter.cel.value*1.8)+32;
+            document.converter.kel.value = document.converter.cel.value+273.15;
+            }
+            function kelConverter(){
+            document.converter.fh.value=((document.converter.kel.value-273.15)*1.8)+32;
+            document.converter.cel.value = document.converter.kel.value-273.15
+            }
+        </script>
+	</head>
+	<body>
+        
+        <form name="converter">
+            <header>
+               <h2 >Temperature Converter</h2> 
+            </header>
+            <article><br>
+            <label> Fahrenheit:</label><br><input type="number" name="fh" placeholder="Fahrenheit" onChange="fhConverter()"><br>
+                <label>Celcius: </label><br><input type="number" name="cel" placeholder="Celcius" onChange="celConverter()"><br>
+            <label>Kelvin: </label><br><input type="number" name="kel" placeholder="Kelvin" onChange="kelConverter()"><br><br>
+                <input type="button" value="  Convert  "><br><br>
+                <a href="conversion.html" class="previous">&laquo; Previous</a>
+            </article>
+                </form>
+	</body>
+</html>

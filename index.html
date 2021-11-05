@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Scientific Calculator</title>
+       <link rel="stylesheet" type="text/css" href="css/app.css"> 
+    </head>
+    <body>
+      <form name="scientific_calculator" >
+ 
+            <header>
+               <h2 >Scientific Calculator</h2> 
+            </header>           
+          <article>
+            <br>
+<table cellspacing="0" cellpadding="1">
+    <tr>
+        <td colspan="5"><input name="display" id="inputLabel" value="0" size="44" maxlength="25"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="button" value="  AC  " onclick="this.form.display.value=0 "></td>
+        <td><input type="button" value="  Del  " onclick="deleteChar(this.form.display)"></td>
+        <td><input type="button" value="  ln   " onclick="if (checkNum(this.form.display.value)) { ln(this.form) }"></td>
+        <td><input type="button" value="  exp  " onclick="if (checkNum(this.form.display.value)) { exp(this.form) }"></td>
+    </tr>
+    <tr>                                   
+        <td><input type="button" value="   (    " onclick="add_value(this.form.display, '(')"></td>
+        <td><input type="button" value="cos" onclick="if (checkNum(this.form.display.value)) { cos(this.form) }"></td>
+        <td><input type="button" value=" sin " onclick="if (checkNum(this.form.display.value)) { sin(this.form) }"></td>
+        <td><input type="button" value=" tan" onclick="if (checkNum(this.form.display.value)) { tan(this.form) }"></td>
+        <td><input type="button" value="   )   " onclick="add_value(this.form.display, ')')"></td>
+    </tr> 
+    <tr>
+        <td><input type="button" value=" +/- " onclick="changeSign(this.form.display)"></td>
+        <td><input type="button" value="   √x   " onclick="if (checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+        <td><input type="button" value="   x²   " onclick="if (checkNum(this.form.display.value)) { square(this.form) }"></td>
+        <td><input type="button" value="   x³   " onclick="if (checkNum(this.form.display.value)) { cube(this.form) }"></td>
+        <td><input type="button" value="  x!  " onclick="if (checkNum(this.form.display.value)) { fact(this.form.display) }"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="  7  " onclick="add_value(this.form.display, '7')"></td>
+        <td><input type="button" value="  8  " onclick="add_value(this.form.display, '8')"></td>
+        <td><input type="button" value="  9  " onclick="add_value(this.form.display, '9')"></td>
+        <td><input type="button" value="%" onclick="percent(this.form.display)"></td> 
+        <td><input type="button" value="&#960;" onclick="add_value(this.form.display,'3.14159265359')"></td>    
+    </tr>                                  
+    <tr>                                       
+        <td><input type="button" value="  4  " onclick="add_value(this.form.display, '4')"></td>
+        <td><input type="button" value="  5  " onclick="add_value(this.form.display, '5')"></td>
+        <td><input type="button" value="  6  " onclick="add_value(this.form.display, '6')"></td>
+        <td><input type="button" value="   +  " onclick="add_value(this.form.display, '+')"></td>
+        <td><input type="button" value="   *   " onclick="add_value(this.form.display, '*')"></td>
+    </tr>                                   
+    <tr>                                    
+        <td><input type="button" value="  1  " onclick="add_value(this.form.display, '1')"></td>
+        <td><input type="button" value="  2  " onclick="add_value(this.form.display, '2')"></td>
+        <td><input type="button" value="  3  " onclick="add_value(this.form.display, '3')"></td>
+        <td><input type="button" value="   -   " onclick="add_value(this.form.display, '-')"></td>
+        <td><input type="button" value="   /   " onclick="add_value(this.form.display, '/')"></td>
+    </tr>                                  
+    <tr>                                    
+        <td colspan="2"><input type="button" value="  0  " onclick="add_value(this.form.display, '0')"></td>
+        <td><input type="button" value="   .  " onclick="add_value(this.form.display, '.')"></td>
+        <td colspan="2"><input type="button" value="Ans" NAME="Enter" onclick="if (checkNum(this.form.display.value)) { compute(this.form) }"></td>
+    </tr>   
+    </table>
+    <a href="conversion.html" class="previous">Conversion Calculator</a>
+    <a href="BMI.html" class="previous">BMI Calculator</a>
+    </article>
+    </form>
+    <script src=js/app12.js></script>
+    </body>
+</html>

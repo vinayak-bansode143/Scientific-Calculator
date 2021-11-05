@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Length Converter</title>
+		  <link rel="stylesheet" type="text/css" href="css/app1.css"> 
+        <script language="JavaScript"> 
+            function kgConverter(){
+            document.converter.gm.value = document.converter.kg.value*1000;
+            document.converter.po.value = document.converter.kg.value*2.2046;
+            document.converter.ou.value = document.converter.kg.value*35.274;
+            }
+            function gmConverter(){
+            document.converter.kg.value = document.converter.gm.value/1000;
+            document.converter.po.value = document.converter.gm.value*0.0022046;
+            document.converter.ou.value = document.converter.gm.value*0.035274;
+            }
+            function poConverter(){
+            document.converter.gm.value = document.converter.po.value/0.0022046;
+            document.converter.kg.value = document.converter.po.value/2.2046;
+            document.converter.ou.value = document.converter.po.value*16;
+            }
+            function ouConverter(){
+            document.converter.kg.value = document.converter.ou.value/35.274;
+            document.converter.po.value = document.converter.ou.value*0.0625;
+            document.converter.gm.value = document.converter.ou.value/0.035274;
+            }
+        </script>
+	</head>
+	<body>
+        
+        <form name="converter">
+            <header>
+               <h2 >Weight Converter</h2> 
+            </header>
+            <article><br>
+             <label> Kilogram: </label><br><input type="number" name="kg" placeholder="Kilogram" onChange="kgConverter()"><br>
+              <label> Gram: </label><br><input type="number" name="gm" placeholder="Gram" onChange="gmConverter()"><br>
+               <label> Pounds: </label><br><input type="number" name="po" placeholder="Pounds" onChange="poConverter()"><br>
+               <label> Ounces: </label><br><input type="number" name="ou" placeholder="Ounces" onChange="ouConverter()"><br><br>
+                <input type="button" value="  Convert  "><br><br>
+                <a href="conversion.html" class="previous">&laquo; Previous</a>
+                </article>
+                </form>
+	</body>
+</html>

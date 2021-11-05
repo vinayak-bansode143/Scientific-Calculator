@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Speed Converter</title>
+		  <link rel="stylesheet" type="text/css" href="css/app1.css"> 
+        <script language="JavaScript"> 
+            function mphConverter(){
+            document.converter.kph.value = document.converter.mph.value*1.609344;
+            document.converter.Knots.value = document.converter.mph.value/1.150779
+            document.converter.Mach.value = document.converter.mph.value/761.207;
+            }
+            function kphConverter(){
+            document.converter.mph.value = document.converter.kph.value/1.609344;
+            document.converter.Knots.value = document.converter.kph.value/1.852;
+            document.converter.Mach.value = document.converter.kph.value/1225.044;
+            }
+            function KnotsConverter(){
+            document.converter.kph.value = document.converter.Knots.value*1.852;
+            document.converter.mph.value = document.converter.Knots.value*1.150779
+            document.converter.Mach.value = document.converter.Knots.value/661.4708;
+            }
+            function MachConverter(){
+            document.converter.mph.value = document.converter.Mach.value*761.207;
+            document.converter.Knots.value = document.converter.Mach.value*661.4708;
+            document.converter.kph.value = document.converter.Mach.value*1225.044;
+            }
+        </script>
+	</head>
+	<body>
+        
+        <form name="converter">
+            <header>
+               <h2 >Speed Converter</h2> 
+            </header>
+            <article><br>
+             <label> MPH: </label><br><input type="number" name="mph" placeholder="MPH" onChange="mphConverter()"><br>
+              <label> KPH: </label><br><input type="number" name="kph" placeholder="KPH" onChange="kphConverter()"><br>
+               <label> Knots: </label><br><input type="number" name="Knots" placeholder="Kont" onChange="KnotsConverter()"><br>
+               <label> Mach: </label><br><input type="number" name="Mach" placeholder="Mach" onChange="MachConverter()"><br><br>
+                <input type="button" value="  Convert  "><br><br>
+                <a href="conversion.html" class="previous">&laquo; Previous</a>
+                </article>
+                </form>
+	</body>
+</html>
